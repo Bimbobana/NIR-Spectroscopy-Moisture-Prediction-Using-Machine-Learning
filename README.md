@@ -116,10 +116,111 @@ The visualization highlights differences in moisture ranges and variability betw
 
 ![Moisture Distribution](docs/moisture_by_species.png)
 
+---
+## Mean Spectrum
+
+The figure below shows the average Near-Infrared (NIR) spectrum across all wood samples.
+
+Mean Spectrum
+
+The spectrum follows a smooth curve with noticeable absorption patterns. The x-axis is displayed in decreasing order (high to low wavenumber), which is standard in spectroscopy.
+
+These patterns help identify regions of the spectrum that may be important for predicting moisture content.
+
 ![Mean Spectrum](docs/mean_spectrum.png)
+
+---
+
+## Spectral Correlation With Moisture
+
+The heatmap below shows the correlation between each spectral wavelength and moisture content.
+
+Spectral Correlation
+
+Most wavelengths show moderate correlation with moisture, while neighboring wavelengths are highly correlated with each other. This indicates redundancy in the spectral features and suggests that dimensionality reduction or regularization techniques will be useful for modeling.
 
 ![Spectral Correlation](docs/moisture_correlation_heatmap.png)
 
+---
+
+## PCA Spectral Clusters
+
+Principal Component Analysis (PCA) reduces the high-dimensional spectral data into two components for visualization.
+
+PCA Spectral Clusters
+
+Each point represents a sample, colored by species number. The plot shows that samples begin to cluster based on spectral similarity, indicating that the spectral data contains meaningful structure that can be used for modeling.
+
 ![PCA Clusters](docs/pca_spectral_clusters.png)
 
+---
+
+## Prediction Performance
+
+The scatter plot below compares predicted moisture values against actual measurements from the test set.
+
+Prediction Performance
+
+Points closer to the diagonal line indicate more accurate predictions. This visualization provides a quick assessment of how well the model is performing.
+
 ![Prediction Results](docs/prediction_results.png)
+
+---
+
+## Model Results
+
+A baseline machine learning model was trained using Ridge Regression.
+
+| Model | RMSE | R² |
+|------|------|------|
+| Ridge Regression | 16.886337190788044 | 0.8733314376848649 |
+
+The dataset was split into training and testing sets using an 80/20 ratio.
+
+These results provide a baseline for future improvements using more advanced models and feature engineering techniques.
+
+---
+
+## Key Findings
+
+- Moisture values range from approximately 0.84 to 298.58
+- Moisture distribution varies significantly across wood species
+- Spectral wavelengths show moderate correlation with moisture content
+- Neighboring wavelengths are highly correlated, indicating redundancy
+
+These observations suggest that regularization techniques or dimensionality reduction methods will be effective for building predictive models.
+
+---
+
+## Future Work
+
+Planned next steps for improving the model:
+
+- Feature preprocessing and scaling
+- Dimensionality reduction (PCA / PLS)
+- Comparison of multiple regression models
+- Hyperparameter tuning
+- Model validation using cross-validation
+
+These steps will help improve model accuracy and robustness.
+
+---
+
+## Technologies Used
+
+- Python
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- Jupyter Notebook
+
+---
+
+## Author
+
+Maggie Smith  
+Junior Data Analyst  
+
+This repository is part of a portfolio project demonstrating applied data analysis and machine learning techniques using spectroscopy data.
