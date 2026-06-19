@@ -61,6 +61,7 @@ The dataset contains NIR spectral measurements and corresponding moisture values
 Each row represents a wood sample, while each spectral column represents reflectance at a specific wavenumber.
 
 ---
+<!--
 
 ## Repository Structure
 
@@ -87,6 +88,7 @@ NIR-Spectroscopy-Moisture-Prediction
 └── README.md
 
 ---
+-->
 
 ## Exploratory Data Analysis
 
